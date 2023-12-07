@@ -39,7 +39,7 @@ with st.expander('Analyze CSV'):
         df = pd.read_csv(upl)
         #del df['Unnamed: 0']
         df['score'] = df['content'].apply(score)
-        df['analysis'] = df['scor'].apply(analyze)
+        df['analysis'] = df['score'].apply(analyze)
         st.write(df.head(10))
 
         @st.cache
